@@ -1,0 +1,76 @@
+.full{
+    font-family: 'Melodrama-Medium', serif;
+}
+.Heading{
+    font-family: 'Melodrama-Medium', serif;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    color: rgb(173,136,49);
+    border-bottom: double 4px;
+    border-color: rgb(173,136,49);
+    margin-bottom: 5px;
+}
+.Side-heading{
+    font-family: 'Melodrama-Medium', serif;
+    font-size: 30px;
+    color: rgb(173,136,49);
+    margin: 20px 0 12px;
+    margin-left: 25px;
+}
+.ornament {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: rgb(173, 136, 49);
+    font-size: 24px;
+}
+.items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 0 16px 24px;
+}
+.item1{
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid rgb(173,136,49);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.1s, box-shadow 0.1s;
+    cursor: pointer;
+    color: rgb(173,136,49);
+}
+.item1:hover,
+.item1:focus-visible{
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
+}
+.item-image{
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.item-name{
+    display: block;
+    padding: 12px;
+    font-family: 'Melodrama-Medium', serif;
+    font-size: 20px;
+}
+
+@media (max-width: 480px){
+    .items{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 0 12px 20px;
+    }
+
+    .item-image{
+        height: 120px;
+    }
+}
